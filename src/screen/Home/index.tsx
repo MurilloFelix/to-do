@@ -103,6 +103,13 @@ export function Home() {
         <FlatList
           data={taskList}
           keyExtractor={(_task, index) => (index + "")}
+          ListEmptyComponent={()=>(
+            <View style={homeStyle.emptyTaskListComponent}>
+              <Image style={homeStyle.emptyTaskListIco} source={require("../../assets/clipboard.png")}/>
+              <Text style={{...homeStyle.emptyTaskListText, fontWeight: 'bold'}}>Você ainda não tem tarefas cadastradas</Text>
+              <Text style={homeStyle.emptyTaskListText}>Crie tarefas e organize seus itens a fazer</Text>
+            </View>
+          )}
           renderItem={({ item }) => (
             <Task
               checked={item.checked}

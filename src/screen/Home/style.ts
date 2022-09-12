@@ -17,7 +17,7 @@ export const homeStyle = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
-  logoIMG:{
+  logoIMG: {
     resizeMode: "contain",
     width: 120,
   },
@@ -37,7 +37,7 @@ export const homeStyle = StyleSheet.create({
     borderColor: "#000",
     marginRight: 5
   },
-  addTaskButton:{
+  addTaskButton: {
     backgroundColor: "#1e6f9f",
     justifyContent: "center",
     alignItems: "center",
@@ -45,24 +45,24 @@ export const homeStyle = StyleSheet.create({
     width: 50,
     height: 50,
   },
-  addTaskButtonIcon:{
+  addTaskButtonIcon: {
     resizeMode: "contain",
     width: 18,
   },
-  totalizers:{
+  totalizers: {
     flexDirection: "row",
     justifyContent: "space-between",
     paddingTop: 25,
     paddingBottom: 15,
     alignItems: "center"
   },
-  totalizersText:{
+  totalizersText: {
     color: "#8284fa",
     marginRight: 10,
     fontSize: 14,
     fontWeight: "bold"
   },
-  totalizersValue:{
+  totalizersValue: {
     fontSize: 12,
     paddingHorizontal: 10,
     paddingVertical: 2,
@@ -71,9 +71,21 @@ export const homeStyle = StyleSheet.create({
     backgroundColor: "#333333",
     fontWeight: "bold"
   },
-  separator:{
+  separator: {
     height: 1,
     marginBottom: 25,
     backgroundColor: "#333333"
+  },
+  emptyTaskListComponent: {
+    alignItems: "center",
+    width: "100%",
+  },
+  emptyTaskListIco: {
+    resizeMode: "contain",
+    width: 65,
+  },
+  emptyTaskListText: {
+    color: "#7f7f7f",
+    fontSize: 15
   }
 })
