@@ -18,16 +18,16 @@ export const taskStyle = StyleSheet.create({
     alignItems: "center",
     borderWidth: 2,
     borderRadius: 1000,
-    width: 25,
-    height: 25,
+    width: 22,
+    height: 22,
     backgroundColor: "transparent",
     borderColor: "#489acc",
   },
   checkBoxChecked: {
     backgroundColor: "#585abd",
     borderWidth: 0,
-    width: 26,
-    height: 26,
+    width: 23,
+    height: 23,
   },
   checkBoxIcon: {
     resizeMode: "contain",
@@ -37,15 +37,11 @@ export const taskStyle = StyleSheet.create({
     paddingHorizontal: 8,
     textAlign: "center",
     flexWrap: "wrap",
-    color: "#fff",
     fontSize: 15,
     flex: 1,
   },
-  deleteButton: {
-  },
-
   deleteIcon: {
     resizeMode: "contain",
-    width: 17,
+    width: 15,
   }
 }) 

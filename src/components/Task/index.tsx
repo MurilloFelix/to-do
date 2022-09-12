@@ -2,33 +2,45 @@ import { useState } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { taskStyle } from "./style";
 
+interface TaskProps {
+  description: string
+  onDelete: ()=> void,
+  checked: boolean 
+  onCheck: ()=> void 
+}
 
-export function Task() {
-  const [isChecked, setIsChecked] = useState(false)
+export function Task(props: TaskProps) {
 
   return (
     <View style={taskStyle.container}>
       <TouchableOpacity
-        style={isChecked ?
+        style={props.checked ?
           {
             ...taskStyle.checkBox,
             ...taskStyle.checkBoxChecked
-          }:
+          } :
           taskStyle.checkBox
         }
-        onPress={() => setIsChecked(value => !value)}
+        onPress={props.onCheck}
       >
         {
-          isChecked ?
+          props.checked ?
             <Image style={taskStyle.checkBoxIcon} source={require('../../assets/check.png')} />
             : ""
         }
       </TouchableOpacity>
-      <Text style={taskStyle.description}>
-        Integer urna interdum massa libero auctor neque turpis turpis semper.
+      <Text
+        style={{
+          ...taskStyle.description, 
+          textDecorationLine: props.checked ? "line-through" : "none",
+          color: props.checked ? "#7f7f7f": "#fff"
+        }}>
+        {props.description}
       </Text>
 
-      <TouchableOpacity style={taskStyle.deleteButton}>
+      <TouchableOpacity
+        onPress={props.onDelete}
+      >
         <Image style={taskStyle.deleteIcon} source={require("../../assets/trashcan.png")} />
       </TouchableOpacity>
     </View>

@@ -52,7 +52,8 @@ export const homeStyle = StyleSheet.create({
   totalizers:{
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingVertical: 25,
+    paddingTop: 25,
+    paddingBottom: 15,
     alignItems: "center"
   },
   totalizersText:{
